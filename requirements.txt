@@ -1,6 +1,7 @@
-fastapi
-uvicorn
-sqlalchemy
-pydantic
-passlib
-python-jose
+fastapi==0.121.0
+uvicorn==0.38.0
+sqlalchemy==2.0.44
+pydantic==2.12.4
+passlib==1.7.4
+python-jose==3.5.0
+pyodbc==5.1.0
