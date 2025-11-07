@@ -29,7 +29,7 @@ export const companyConfig = {
     facebook: "https://facebook.com/aruvimedicalsystems",
     twitter: "https://twitter.com/aruvimedicalsystems",
     linkedin: "https://linkedin.com/company/aruvimedicalsystems",
-    instagram: "https://instagram.com/aruvimedicalsystems"
+    instagram: "https://instagram.com/aruvimedicalsystem"
   },
 
   // Business Hours

@@ -722,3 +722,199 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+/* ===== FASTER ANIMATIONS ===== */
+[data-animation] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.animate-in {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Remove all complex animations */
+.typewriter,
+.glow::after,
+.magnetic-btn::before,
+.advanced-card::before,
+.shimmer::before {
+  animation: none !important;
+  display: none !important;
+}
+
+/* ===== BETTER SPACING ===== */
+#products {
+  padding-top: 40px !important;
+}
+
+.section {
+  padding: 60px 0 !important;
+}
+
+.light-bg {
+  background: var(--light-bg);
+}
+
+/* ===== FIX MARQUEE TO STAY AT TOP ===== */
+.welcome-marquee {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1003;
+  margin-top: 0 !important;
+}
+
+/* Adjust header margin for marquee */
+.header {
+  margin-top: 40px !important;
+}
+
+/* ===== FIX MODAL POPUP ===== */
+.lead-modal-content {
+  position: relative;
+  z-index: 1;
+}
+
+.modal-logo {
+  position: relative;
+  z-index: 2;
+}
+
+.lead-form {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== PRODUCT CATEGORIES WITH IMAGES ===== */
+.category-card-enhanced {
+  position: relative;
+  overflow: hidden;
+}
+
+.category-image {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  background: var(--light-bg);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.category-icon {
+  display: none; /* Hide emoji icons when using images */
+}
+
+/* ===== FIX PRODUCT CATEGORIES EXPANSION ===== */
+.category-products-section {
+  margin-top: 20px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SEARCH SUGGESTIONS ===== */
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-light);
+  border-top: none;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.suggestion-item {
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.suggestion-item:hover {
+  background: var(--light-green);
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+/* ===== REMOVE THEME TOGGLE STYLES ===== */
+.theme-toggle {
+  display: none !important;
+}
+
+/* ===== ENHANCED PRODUCT CARD STYLES ===== */
+.product-card-category {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.product-card-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-image-category {
+  height: 140px;
+  background: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-image-category img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ===== BETTER SPACING BETWEEN SECTIONS ===== */
+.enhanced-product-categories {
+  margin-bottom: 40px;
+}
+
+.featured-products {
+  margin-top: 40px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .welcome-marquee {
+    font-size: 0.8rem;
+    padding: 10px 0;
+  }
+  
+  .header {
+    margin-top: 30px !important;
+  }
+  
+  .category-image {
+    height: 100px;
+  }
+}

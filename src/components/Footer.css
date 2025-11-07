@@ -182,3 +182,50 @@
   margin-bottom: 15px;
   object-fit: contain;
 }
+/* Update Footer.css */
+.footer {
+  background: var(--dark-green); /* Already dark, but ensure it's visible */
+  color: var(--white);
+  padding: 60px 0 20px;
+  position: relative;
+}
+
+.footer-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #e2e8f0; /* Lighter color for better contrast */
+  font-weight: 500;
+}
+
+.contact-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* Make social links more visible */
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.15); /* More visible background */
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.social-links a:hover {
+  background: var(--accent-green);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

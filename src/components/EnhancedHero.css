@@ -353,3 +353,155 @@
     height: 50px;
   }
 }
+/* Add these styles to EnhancedHero.css */
+
+/* Improved floating cards for mobile */
+@media (max-width: 768px) {
+  .floating-elements {
+    flex-direction: column;
+    gap: 15px;
+    max-width: 100%;
+  }
+  
+  .floating-card {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+  
+  .floating-card .card-icon {
+    font-size: 2.5rem;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .floating-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .floating-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+/* Fix marquee overlap */
+.welcome-marquee {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1003;
+  margin-top: 0 !important;
+}
+
+.header {
+  margin-top: 40px !important;
+}
+
+/* Ensure header is above marquee */
+.header,
+.main-nav {
+  z-index: 1004;
+} 
+/* Enhanced Hero Styles - MOBILE FRIENDLY */
+.enhanced-hero {
+  margin-top: 0;
+}
+
+.enhanced-hero .hero-background {
+  background: var(--hero-bg);
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.enhanced-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Features Grid for Mobile */
+.features-grid-mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.feature-item-mobile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 15px;
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.feature-item-mobile:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon-mobile {
+  font-size: 2.5rem;
+  color: var(--accent-green);
+  flex-shrink: 0;
+}
+
+.feature-content-mobile h4 {
+  font-size: 1.2rem;
+  font-weight: var(--font-semibold);
+  margin-bottom: 8px;
+  color: var(--white);
+}
+
+.feature-content-mobile p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .enhanced-hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .hero-visual {
+    order: -1;
+  }
+  
+  .features-grid-mobile {
+    gap: 15px;
+  }
+  
+  .feature-item-mobile {
+    padding: 20px;
+    gap: 15px;
+  }
+  
+  .feature-icon-mobile {
+    font-size: 2rem;
+  }
+  
+  .feature-content-mobile h4 {
+    font-size: 1.1rem;
+  }
+  
+  .feature-content-mobile p {
+    font-size: 0.85rem;
+  }
+}
