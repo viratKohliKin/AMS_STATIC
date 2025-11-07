@@ -5,3 +5,5 @@ pydantic==2.12.4
 passlib==1.7.4
 python-jose==3.5.0
 pyodbc==5.1.0
+pydantic-settings==2.2.1
+alembic==1.13.2
