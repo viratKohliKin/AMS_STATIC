@@ -50,10 +50,6 @@ function App() {
       
       <section id="products" className="section light-bg">
         <div className="container">
-          <h2 className="section-title">Our Medical Products</h2>
-          <p className="section-subtitle">
-            Premium quality surgical instruments and medical equipment trusted by healthcare professionals
-          </p>
           <EnhancedProductCategories />
           <FeaturedProducts />
         </div>

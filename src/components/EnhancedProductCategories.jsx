@@ -1,4 +1,3 @@
-// src/components/EnhancedProductCategories.jsx
 import React, { useState } from 'react';
 import { productCategories, allProducts } from '../config/products';
 import { useScrollAnimations } from '../hooks/useScrollAnimations';
@@ -7,6 +6,7 @@ import './EnhancedProductCategories.css';
 const EnhancedProductCategories = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
   useScrollAnimations();
 
   const handleCategoryClick = (categoryId) => {
@@ -24,14 +24,22 @@ const EnhancedProductCategories = () => {
     return allProducts.filter(product => product.category === categoryId);
   };
 
+  const handleImageClick = (product) => {
+    setSelectedImage(product.image);
+  };
+
+  const closeImageModal = () => {
+    setSelectedImage(null);
+  };
+
   return (
-    <section id="products" className="section light-bg">
+    <section id="products" className="section light-bg enhanced-product-categories">
       <div className="container">
         <h2 className="section-title" data-animation="fadeInUp" data-delay="200">
-          Our Product Categories
+          Our Medical Products
         </h2>
         <p className="section-subtitle" data-animation="fadeInUp" data-delay="300">
-          Comprehensive range of medical equipment and accessories
+          Premium quality surgical instruments and medical equipment trusted by healthcare professionals
         </p>
 
         {/* Categories Grid */}
@@ -44,7 +52,20 @@ const EnhancedProductCategories = () => {
               data-delay={400 + (index * 100)}
               onClick={() => handleCategoryClick(category.id)}
             >
-              <div className="category-icon">{category.icon}</div>
+              <div className="category-image-container">
+                <img 
+                  src={category.image || '/images/placeholder.jpg'} 
+                  alt={category.name}
+                  className="category-image"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    const fallback = document.createElement('div');
+                    fallback.className = 'category-icon';
+                    fallback.textContent = category.icon;
+                    e.target.parentNode.appendChild(fallback);
+                  }}
+                />
+              </div>
               <h3 className="category-name">{category.name}</h3>
               <p className="category-description">{category.description}</p>
               <div className="product-count">
@@ -73,8 +94,26 @@ const EnhancedProductCategories = () => {
             <div className="category-products-grid">
               {filteredProducts.map((product, index) => (
                 <div key={product.id} className="product-card-category">
-                  <div className="product-image-category">
-                    {product.name.split(' ').map(word => word[0]).join('').toUpperCase()}
+                  <div 
+                    className="product-image-category"
+                    onClick={() => handleImageClick(product)}
+                  >
+                    <img 
+                      src={product.image || '/images/placeholder.jpg'} 
+                      alt={product.name}
+                      className="product-image"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        const fallback = e.target.parentNode.querySelector('.product-image-fallback');
+                        if (fallback) fallback.style.display = 'flex';
+                      }}
+                    />
+                    <div 
+                      className="product-image-fallback"
+                      style={{ display: 'none' }}
+                    >
+                      {product.name.split(' ').map(word => word[0]).join('').toUpperCase()}
+                    </div>
                   </div>
                   <div className="product-content-category">
                     <h4 className="product-name-category">{product.name}</h4>
@@ -93,7 +132,7 @@ const EnhancedProductCategories = () => {
                     </div>
                     
                     <div className="product-footer-category">
-                      <div className="product-price-category">₹{product.price}</div>
+                      <div className="product-price-category">{product.price}</div>
                       <button className="btn btn-primary">
                         Add to Quote
                       </button>
@@ -101,6 +140,18 @@ const EnhancedProductCategories = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* Image Modal */}
+        {selectedImage && (
+          <div className="image-modal-overlay" onClick={closeImageModal}>
+            <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
+              <button className="image-modal-close" onClick={closeImageModal}>
+                ×
+              </button>
+              <img src={selectedImage} alt="Product" className="image-modal-img" />
             </div>
           </div>
         )}

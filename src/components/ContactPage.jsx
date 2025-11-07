@@ -29,13 +29,6 @@ const ContactPage = ({ onBack }) => {
 
   return (
     <div className="contact-page">
-      {/* Back Button */}
-      <div className="contact-back-btn">
-        <button onClick={onBack} className="btn btn-secondary">
-          <FaArrowLeft /> Back to Home
-        </button>
-      </div>
-
       {/* Hero Section */}
       <section className="contact-hero">
         <div className="container">

@@ -3,11 +3,11 @@ import './WelcomeMarquee.css';
 
 const WelcomeMarquee = () => {
   const messages = [
-    "🏥 Welcome to MedEquip Pro - Your Trusted Medical Equipment Partner",
-    "⭐ Premium Quality Medical Equipment with 15+ Years Experience", 
-    "🏆 Trusted by 500+ Hospitals & Healthcare Facilities Worldwide",
-    "🔒 ISO Certified • FDA Approved • Quality Guaranteed",
-    "🚚 Fast Delivery • Installation Support • 24/7 Customer Service"
+    "🏥 Welcome to Aruvi Medical System - Your Trusted Medical Equipment Partner",
+    "⭐ Premium Quality Medical Equipments", 
+    "🏆 Trusted by Hospitals & Healthcare Facilities all over india",
+    "🔒 Certified • Approved • Quality Guaranteed",
+    "🚚 Fast Delivery • Installation Support • 24/7/365 Customer Service"
   ];
 
   return (
