@@ -15,8 +15,8 @@ DATABASE_URL = (
 # Create the SQLAlchemy engine (connects to the database)
 engine = create_engine(
     DATABASE_URL,
-    echo=settings.DEBUG,         # Prints SQL queries in console (helpful for debugging)
-    fast_executemany=True        # Speeds up bulk inserts
+    echo=settings.DEBUG,
+    fast_executemany=True
 )
 
 # Create a Session class to manage DB sessions
