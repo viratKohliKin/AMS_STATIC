@@ -1,16 +1,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
-from app.core.config import get_settings
+from app.core.config import get_settings , DATABASE_URL
 
 # Load settings from .env
 settings = get_settings()
-
-# Connection string for MS SQL Server using pyodbc driver
-DATABASE_URL = (
-    f"mssql+pyodbc://{settings.DB_USER}:{settings.DB_PASSWORD}"
-    f"@{settings.DB_SERVER}/{settings.DB_NAME}"
-    f"?driver={settings.DB_DRIVER.replace(' ', '+')}"
-)
 
 # Create the SQLAlchemy engine (connects to the database)
 engine = create_engine(

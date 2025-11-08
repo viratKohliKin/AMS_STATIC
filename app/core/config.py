@@ -27,3 +27,11 @@ def get_settings():
     FastAPI apps often import this multiple times, so this avoids reloading.
     """
     return Settings()
+
+settings = get_settings()
+# Connection string for MS SQL Server using pyodbc driver
+DATABASE_URL = (
+    f"mssql+pyodbc://{settings.DB_USER}:{settings.DB_PASSWORD}"
+    f"@{settings.DB_SERVER}/{settings.DB_NAME}"
+    f"?driver={settings.DB_DRIVER.replace(' ', '+')}"
+)
