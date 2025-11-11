@@ -1,44 +1,75 @@
 // src/config/products.js - UPDATED WITH CONFIGURABLE IMAGE PATHS
-
+import bpMachine from '../assets/products/bp-machine.jpg';
+import glucometer from '../assets/products/glucometer.jpg';
+import pulseOximeter from '../assets/products/pulse-oximeter.jpg';
+import thermometer from '../assets/products/thermometer.jpg';
+import hotAirBag from '../assets/products/hot-air-bag.jpg';
+import nebuliser from '../assets/products/nebuliser.jpg';
+import ecgPhilips from '../assets/products/ecg-philips.jpg';
+import ecgMindray from '../assets/products/ecg-mindray.jpg';
+import ecgNikkon from '../assets/products/ecg-nikkon.jpg';
+import ecgBpl from '../assets/products/ecg-bpl.jpg';
+import ecgSchiller from '../assets/products/ecg-schiller.jpg';
+import tempPhilips from '../assets/products/temp-philips.jpg';
+import tempMindray from '../assets/products/temp-mindray.jpg';
+import tempSchiller from '../assets/products/temp-schiller.jpg'; 
+import spo2Philips from '../assets/products/spo2-philips.jpg';
+import spo2Mindray from '../assets/products/spo2-mindray.jpg';
+import spo2Nikkon from '../assets/products/spo2-nikkon.jpg'; 
+import spo2Schiller from '../assets/products/spo2-schiller.jpg';
+import nibpSinglePhilips from '../assets/products/nibp-single-philips.jpg';
+import nibpDoublePhilips from '../assets/products/nibp-double-philips.jpg';
+import nibpSingleMindray from '../assets/products/nibp-single-mindray.jpg';
+import nibpDoubleMindray from '../assets/products/nibp-double-mindray.jpg';
+import hosePhilips from '../assets/products/hose-philips.jpg';
+import hoseMindray from '../assets/products/hose-mindray.jpg';
+import hoseNikkon from '../assets/products/hose-nikkon.jpg';
+import hoseSchiller from '../assets/products/hose-schiller.jpg';
+import homecare from '../assets/products/home_care_products.jpg';
+import ecgcables from '../assets/products/ecg_cables.jpg';
+import tempProbes from '../assets/products/temperature_probes.jpg';
+import spo2sensor from '../assets/products/spo2sensor.jpg';
+import cuff from '../assets/products/cuff.jpg';
+import hose from '../assets/products/hose.jpg';
 // Image configuration - Update these paths when you add images
 export const productImages = {
   // Home Care Products
-  'bp-machine': `${import.meta.env.BASE_URL}/src/assets/products/bp-machine.jpg`,
-  'glucometer': `${import.meta.env.BASE_URL}/src/assets/products/glucometer.jpg`, 
-  'pulse-oximeter': `${import.meta.env.BASE_URL}/src/assets/products/pulse-oximeter.jpg`,
-  'thermometer': `${import.meta.env.BASE_URL}/src/assets/products/thermometer.jpg`,
-  'hot-air-bag': `${import.meta.env.BASE_URL}/src/assets/products/hot-air-bag.jpg`, // You'll need to add this
-  'nebuliser': `${import.meta.env.BASE_URL}/src/assets/products/nebuliser.jpg`, // You'll need to add this
+  'bp-machine': bpMachine,
+  'glucometer': glucometer, 
+  'pulse-oximeter': pulseOximeter,
+  'thermometer': thermometer,
+  'hot-air-bag': hotAirBag, // You'll need to add this
+  'nebuliser': nebuliser, // You'll need to add this
   
   // ECG Cables
-  'ecg-philips': `${import.meta.env.BASE_URL}/src/assets/products/ecg-philips.jpg`,
-  'ecg-mindray': `${import.meta.env.BASE_URL}/src/assets/products/ecg-mindray.jpg`,
-  'ecg-nikkon': `${import.meta.env.BASE_URL}/src/assets/products/ecg-nikkon.jpg`,
-  'ecg-bpl': `${import.meta.env.BASE_URL}/src/assets/products/ecg-bpl.jpg`,
-  'ecg-schiller': `${import.meta.env.BASE_URL}/src/assets/products/ecg-schiller.jpg`,
+  'ecg-philips': ecgPhilips,
+  'ecg-mindray': ecgMindray,
+  'ecg-nikkon': ecgNikkon,
+  'ecg-bpl': ecgBpl,
+  'ecg-schiller': ecgSchiller,
   
   // Temperature Probes
-  'temp-philips': `${import.meta.env.BASE_URL}/src/assets/products/temp-philips.jpg`,
-  'temp-mindray': `${import.meta.env.BASE_URL}/src/assets/products/temp-mindray.jpg`,
-  'temp-schiller': `${import.meta.env.BASE_URL}/src/assets/products/temp-schiller.jpg`,
+  'temp-philips': tempPhilips,
+  'temp-mindray': tempMindray,
+  'temp-schiller': tempSchiller, 
   
   // SpO2 Sensors
-  'spo2-philips': `${import.meta.env.BASE_URL}/src/assets/products/spo2-philips.jpg`,
-  'spo2-mindray': `${import.meta.env.BASE_URL}/src/assets/products/spo2-mindray.jpg`,
-  'spo2-nikkon': `${import.meta.env.BASE_URL}/src/assets/products/spo2-nikkon.jpg`,
-  'spo2-schiller': `${import.meta.env.BASE_URL}/src/assets/products/spo2-schiller.jpg`,
+  'spo2-philips': spo2Philips,
+  'spo2-mindray': spo2Mindray,
+  'spo2-nikkon': spo2Nikkon,
+  'spo2-schiller': spo2Schiller,
   
   // NIBP Cuffs
-  'nibp-single-philips': `${import.meta.env.BASE_URL}/src/assets/products/nibp-single-philips.jpg`,
-  'nibp-double-philips': `${import.meta.env.BASE_URL}/src/assets/products/nibp-double-philips.jpg`,
-  'nibp-single-mindray': `${import.meta.env.BASE_URL}/src/assets/products/nibp-single-mindray.jpg`,
-  'nibp-double-mindray': `${import.meta.env.BASE_URL}/src/assets/products/nibp-double-mindray.jpg`,
+  'nibp-single-philips': nibpSinglePhilips,
+  'nibp-double-philips': nibpDoublePhilips,
+  'nibp-single-mindray': nibpSingleMindray,
+  'nibp-double-mindray': nibpDoubleMindray,
   
   // NIBP Hoses
-  'hose-philips': `${import.meta.env.BASE_URL}/src/assets/products/hose-philips.jpg`,
-  'hose-mindray': `${import.meta.env.BASE_URL}/src/assets/products/hose-mindray.jpg`,
-  'hose-nikkon': `${import.meta.env.BASE_URL}/src/assets/products/hose-nikkon.jpg`,
-  'hose-schiller': `${import.meta.env.BASE_URL}/src/assets/products/hose-schiller.jpg`
+  'hose-philips': hosePhilips,
+  'hose-mindray': hoseMindray,
+  'hose-nikkon': hoseNikkon,
+  'hose-schiller': hoseSchiller
 };
 
 // Product categories
@@ -48,42 +79,42 @@ export const productCategories = [
     name: 'Home Care Products',
     icon: '🏠',
     description: 'Essential medical devices for home healthcare',
-    image: `${import.meta.env.BASE_URL}/src/assets/products/home_care_products.jpg`
+    image: homecare
   },
   {
     id: 'ecg-cables', 
     name: 'ECG Cables',
     icon: '📊',
     description: 'High-quality ECG cables for various monitor brands',
-    image: `${import.meta.env.BASE_URL}/src/assets/products/ecg_cables.jpg`
+    image: ecgcables
   },
   {
     id: 'temperature-probes',
     name: 'Temperature Probes',
     icon: '🌡️',
     description: 'Precision temperature probes for medical monitors',
-    image: `${import.meta.env.BASE_URL}/src/assets/products/temperature_probes.jpg`
+    image: tempProbes
   },
   {
     id: 'spo2-sensors',
     name: 'SpO2 Sensors',
     icon: '❤️',
     description: 'Clip-type SpO2 sensors for accurate oxygen monitoring',
-    image: `${import.meta.env.BASE_URL}/src/assets/products/spo2sensor.jpg`
+    image: spo2sensor
   },
   {
     id: 'nibp-cuffs',
     name: 'NIBP Cuffs',
     icon: '💪',
     description: 'Single & double side NIBP cuffs for blood pressure monitoring',
-    image: `${import.meta.env.BASE_URL}/src/assets/products/cuff.jpg`
+    image: cuff
   },
   {
     id: 'nibp-hoses',
     name: 'NIBP Hoses',
     icon: '🔄',
     description: 'Durable NIBP hoses for various monitor brands',
-    image: `${import.meta.env.BASE_URL}/src/assets/products/hose.jpg`
+    image: hose
   }
 ];
 
