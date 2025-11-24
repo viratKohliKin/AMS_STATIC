@@ -43,19 +43,19 @@ const Footer = ({ company }) => {
               <li><a href="#about">About Us</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#products">Products</a></li>
-              <li><a href="#certifications">Certifications</a></li>
+              {/* <li><a href="#certifications">Certifications</a></li> */}
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
           
           <div className="footer-section">
-            <h4>Products</h4>
+            <h4>Policy Information</h4>
             <ul>
-              <li><a href="#diagnostic">Diagnostic Equipment</a></li>
-              <li><a href="#surgical">Surgical Instruments</a></li>
-              <li><a href="#monitoring">Patient Monitoring</a></li>
-              <li><a href="#icu">ICU Equipment</a></li>
-              <li><a href="#lab">Laboratory Equipment</a></li>
+              <li><a href="#paymentpolicy">Payment Policy</a></li>
+              <li><a href="#privacypolicy">Privacy Policy</a></li>
+              <li><a href="#returnrefundpolicy">Return & Refund Policy</a></li>
+              <li><a href="#shippingpolicy">Shipping Policy</a></li>
+              <li><a href="#termsandconditions">Terms & Conditions</a></li>
             </ul>
           </div>
           

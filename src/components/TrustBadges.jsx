@@ -6,13 +6,17 @@ const TrustBadges = () => {
   const badges = [
     {
       icon: <FaShieldAlt />,
-      title: 'Quality Certified',
-      description: 'ISO 13485:2016 Certified'
+      // title: 'Quality Certified',
+      // description: 'ISO 13485:2016 Certified',
+      title: 'Quality You Can Trust',
+      description: 'Committed to high-quality standards'
     },
     {
       icon: <FaAward />,
-      title: 'Award Winning',
-      description: 'Best Medical Supplier 2023'
+      // title: 'Award Winning',
+      // description: 'Best Medical Supplier 2023'
+      title: 'Known for Excellence',
+      description: 'Trusted Medical Supplier Since 2022'
     },
     {
       icon: <FaShippingFast />,
@@ -22,7 +26,8 @@ const TrustBadges = () => {
     {
       icon: <FaHeadset />,
       title: '24/7/365 Support',
-      description: 'Expert Technical Support'
+      // description: 'Expert Technical Support'
+      description: 'Technical Support'
     }
   ];
 

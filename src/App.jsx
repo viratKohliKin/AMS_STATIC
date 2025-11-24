@@ -58,7 +58,7 @@ function App() {
         </div>
       </section>
 
-      <Certifications company={companyConfig} />
+      {/* <Certifications company={companyConfig} /> */}
       <ReviewsCarousel />
       <LocationMap />
       <Contact company={companyConfig} />

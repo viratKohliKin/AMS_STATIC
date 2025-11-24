@@ -55,7 +55,7 @@ const EnhancedHeader = ({ company, searchQuery, setSearchQuery, onNavigate }) =>
               <a href="#about" onClick={() => handleNavClick('about')}>About</a>
               <ServicesDropdown />
               <a href="#products" onClick={() => handleNavClick('products')}>Products</a>
-              <a href="#certifications" onClick={() => handleNavClick('certifications')}>Certifications</a>
+              {/* <a href="#certifications" onClick={() => handleNavClick('certifications')}>Certifications</a> */}
               <a href="#contact" onClick={() => handleNavClick('contact')}>Contact</a>
             </div>
 
@@ -191,10 +191,10 @@ const EnhancedHeader = ({ company, searchQuery, setSearchQuery, onNavigate }) =>
               <span>🛒</span>
               <span>Products</span>
             </a>
-            <a href="#certifications" onClick={() => handleNavClick('certifications')} className="sidebar-nav-item">
+            {/* <a href="#certifications" onClick={() => handleNavClick('certifications')} className="sidebar-nav-item">
               <span>🏆</span>
               <span>Certifications</span>
-            </a>
+            </a> */}
             <a href="#contact" onClick={() => handleNavClick('contact')} className="sidebar-nav-item">
               <span>📞</span>
               <span>Contact</span>

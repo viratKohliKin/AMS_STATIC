@@ -21,7 +21,7 @@ const WhatsAppButton = () => {
     // phoneNumber = '15551234567'; // Test number
     
     const message = encodeURIComponent(
-      `Hello Aruvi Medical Systems! 👋\n\nI visited your website and I'm interested in your medical equipment. Could you please provide me with more information?`
+      `Hello Aruvi Medical System! 👋\n\nI visited your website and I'm interested in your medical equipment. Could you please provide me with more information?`
     );
     
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;

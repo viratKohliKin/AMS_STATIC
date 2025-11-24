@@ -9,7 +9,12 @@ const LeadCaptureModal = () => {
     name: '',
     phone: '',
     email: '',
-    requirement: ''
+    requirement: '',
+    addressLine1: '',
+    addressLine2: '',
+    city: '',
+    state: '',
+    pincode: ''
   });
 
   useEffect(() => {
@@ -34,27 +39,45 @@ const LeadCaptureModal = () => {
     }
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted');
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log('Form submitted');
     
-    // Validate form data
-    if (!formData.name || !formData.phone || !formData.email) {
-      alert('Please fill in all required fields');
-      return;
-    }
+  //   // Validate form data
+  //   if (!formData.name || !formData.phone || !formData.email) {
+  //     alert('Please fill in all required fields');
+  //     return;
+  //   }
     
-    console.log('Lead captured:', formData);
+  //   console.log('Lead captured:', formData);
     
-    // Store in localStorage to prevent showing again
-    localStorage.setItem('leadFormSubmitted', 'true');
+  //   // Store in localStorage to prevent showing again
+  //   localStorage.setItem('leadFormSubmitted', 'true');
     
-    // Show success message
-    alert(`Thank you ${formData.name}! We'll contact you within 24 hours.`);
+  //   // Show success message
+  //   alert(`Thank you ${formData.name}! We'll contact you within 24 hours.`);
     
-    handleClose();
-  };
+  //   handleClose();
+  // };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
+  try {
+    const res = await fetch("http://localhost:8000/api/leads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData)
+    });
+
+    if (!res.ok) throw new Error("Submission failed");
+
+    alert("Thank you! Our team will contact you shortly.");
+    handleClose();
+  } catch (error) {
+    alert("Something went wrong. Please try again.");
+    console.error(error);
+  }
+};
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -109,7 +132,7 @@ const LeadCaptureModal = () => {
       <div className="lead-modal">
         <div className="lead-modal-header">
           <div className="modal-logo">
-            <h2>Aruvi Medical Systems</h2>
+            <h2>Aruvi Medical System</h2>
             <p>Your Trusted Healthcare Partner</p>
           </div>
           <button className="close-btn" onClick={handleClose}>
@@ -119,7 +142,7 @@ const LeadCaptureModal = () => {
 
         <div className="lead-modal-content">
           <div className="modal-welcome">
-            <h3>Welcome to Aruvi Medical Systems! 🏥</h3>
+            <h3>Welcome to Aruvi Medical System! 🏥</h3>
             <p>Get personalized medical equipment recommendations and exclusive offers</p>
           </div>
 
@@ -224,6 +247,68 @@ const LeadCaptureModal = () => {
       className="form-input-fixed"
     />
   </div>
+
+  <div className="form-group">
+  <input
+    type="text"
+    name="addressLine1"
+    placeholder="Address Line 1 *"
+    value={formData.addressLine1}
+    onChange={handleChange}
+    required
+    className="form-input-fixed"
+  />
+</div>
+
+<div className="form-group">
+  <input
+    type="text"
+    name="addressLine2"
+    placeholder="Address Line 2 (Optional)"
+    value={formData.addressLine2}
+    onChange={handleChange}
+    className="form-input-fixed"
+  />
+</div>
+
+<div className="form-group">
+  <input
+    type="text"
+    name="city"
+    placeholder="City *"
+    value={formData.city}
+    onChange={handleChange}
+    required
+    className="form-input-fixed"
+  />
+</div>
+
+<div className="form-group">
+  <input
+    type="text"
+    name="state"
+    placeholder="State *"
+    value={formData.state}
+    onChange={handleChange}
+    required
+    className="form-input-fixed"
+  />
+</div>
+
+<div className="form-group">
+  <input
+    type="text"
+    name="pincode"
+    placeholder="Pincode *"
+    value={formData.pincode}
+    onChange={handleChange}
+    required
+    pattern="[0-9]{6}"
+    title="Please enter a valid 6-digit pincode"
+    className="form-input-fixed"
+  />
+</div>
+
 
   <div className="form-group full-width">
     <textarea

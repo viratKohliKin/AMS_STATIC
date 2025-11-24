@@ -9,7 +9,12 @@ const Contact = ({ company }) => {
     email: '',
     company: '',
     phone: '',
-    message: ''
+    addressLine1: '',
+    addressLine2: '',
+    city: '',
+    state: '',
+    pincode: '',
+    requirement: '',
   });
   
   useScrollAnimations();
@@ -129,11 +134,66 @@ const Contact = ({ company }) => {
               />
             </div>
             <div className="form-group">
+  <input
+    type="text"
+    name="addressLine1"
+    placeholder="Address Line 1 *"
+    value={formData.addressLine1}
+    onChange={handleChange}
+    required
+  />
+</div>
+
+<div className="form-group">
+  <input
+    type="text"
+    name="addressLine2"
+    placeholder="Address Line 2 (Optional)"
+    value={formData.addressLine2}
+    onChange={handleChange}
+  />
+</div>
+
+<div className="form-group">
+  <input
+    type="text"
+    name="city"
+    placeholder="City *"
+    value={formData.city}
+    onChange={handleChange}
+    required
+  />
+</div>
+
+<div className="form-group">
+  <input
+    type="text"
+    name="state"
+    placeholder="State *"
+    value={formData.state}
+    onChange={handleChange}
+    required
+  />
+</div>
+
+<div className="form-group">
+  <input
+    type="text"
+    name="pincode"
+    placeholder="Pincode *"
+    value={formData.pincode}
+    onChange={handleChange}
+    required
+    pattern="[0-9]{6}"
+    title="Please enter a valid 6-digit pincode"
+  />
+</div>
+            <div className="form-group">
               <textarea
-                name="message"
+                name="requirement"
                 placeholder="Your Message or Equipment Requirements"
                 rows="4"
-                value={formData.message}
+                value={formData.requirement}
                 onChange={handleChange}
                 required
               ></textarea>
