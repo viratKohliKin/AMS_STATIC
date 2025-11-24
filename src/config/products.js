@@ -31,6 +31,9 @@ import tempProbes from '../assets/products/temperature_probes.jpg';
 import spo2sensor from '../assets/products/spo2sensor.jpg';
 import cuff from '../assets/products/cuff.jpg';
 import hose from '../assets/products/hose.jpg';
+import co2Insufflator from '../assets/products/co2_insuffolator.jpg';
+import lightSource from '../assets/products/light_source.jpg';
+import masimoRad97Probe from '../assets/products/masimo_probe.jpg';
 // Image configuration - Update these paths when you add images
 export const productImages = {
   // Home Care Products
@@ -40,6 +43,9 @@ export const productImages = {
   'thermometer': thermometer,
   'hot-air-bag': hotAirBag, // You'll need to add this
   'nebuliser': nebuliser, // You'll need to add this
+  'co2_insuffolator': co2Insufflator,
+  'light_source': lightSource,
+  'masimo_probe': masimoRad97Probe,
   
   // ECG Cables
   'ecg-philips': ecgPhilips,
@@ -195,6 +201,57 @@ export const allProducts = [
     inStock: true,
     isFeatured: true
   },
+  {
+  id: 'co2-insufflator',
+  name: 'CO₂ INSUFFLATOR',
+  category: 'surgical-equipments',
+  price: 'Contact for Price',
+  description: 'High-precision CO₂ insufflation system for laparoscopic procedures',
+  features: [
+    'Adjustable Flow Rates',
+    'Real-Time Pressure Monitoring',
+    'Integrated Safety Alarms',
+    'High-Flow Insufflation'
+  ],
+  brands: ['Stryker', 'Karl Storz', 'Olympus'],
+  image: getProductImage('co2_insuffolator'),
+  inStock: true,
+  isFeatured: true
+  },
+  {
+  id: 'light-source',
+  name: 'ENDOSCOPY LIGHT SOURCE',
+  category: 'surgical-equipments',
+  price: 'Contact for Price',
+  description: 'High-intensity medical-grade light source for endoscopic visualization',
+  features: [
+    'LED / Xenon Options',
+    'Long Lamp Life',
+    'High Brightness Output',
+    'Compatible with Multiple Scopes'
+  ],
+  brands: ['Stryker', 'Karl Storz', 'Olympus', 'Pentax'],
+  image: getProductImage('light_source'),
+  inStock: true,
+  isFeatured: true
+  },
+  {
+  id: 'masimo-rad97-probe',
+  name: 'MASIMO RAD-97 PROBE',
+  category: 'patient-monitoring',
+  price: 'Contact for Price',
+  description: 'Sensor probe compatible with Masimo Rad-97 for accurate SpO₂ and pulse rate monitoring',
+  features: [
+    'High Accuracy',
+    'Comfortable Patient Fit',
+    'Compatible with Rad-97',
+    'Durable Medical-Grade Cable'
+  ],
+  brands: ['Masimo'],
+  image: getProductImage('masimo_probe'),
+  inStock: true,
+  isFeatured: true
+},
 
   // ECG Cables
   {
