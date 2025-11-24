@@ -229,7 +229,7 @@ const ContactPage = () => {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Aruvi Medical Systems Location"
+                title="Aruvi Medical System Location"
               ></iframe>
             </div>
           </div>

@@ -10,7 +10,12 @@ const ContactPage = ({ onBack }) => {
     company: '',
     phone: '',
     subject: '',
-    message: ''
+    message: '',
+    addressLine1: '',
+    addressLine2: '',
+    city: '',
+    state: '',
+    pincode: '',
   });
 
   const handleSubmit = (e) => {
@@ -193,6 +198,62 @@ const ContactPage = ({ onBack }) => {
                   </div>
 
                   <div className="form-group">
+                    <input
+                      type="text"
+                      name="addressLine1"
+                      placeholder="Address Line 1 *"
+                      value={formData.addressLine1}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      name="addressLine2"
+                      placeholder="Address Line 2 (Optional)"
+                      value={formData.addressLine2}
+                      onChange={handleChange}
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      name="city"
+                      placeholder="City *"
+                      value={formData.city}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      name="state"
+                      placeholder="State *"
+                      value={formData.state}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      name="pincode"
+                      placeholder="Pincode *"
+                      value={formData.pincode}
+                      onChange={handleChange}
+                      required
+                      pattern="[0-9]{6}"
+                      title="Please enter a valid 6-digit pincode"
+                    />
+                  </div>
+
+                  <div className="form-group">
                     <label htmlFor="message">Message *</label>
                     <textarea
                       id="message"
@@ -229,7 +290,7 @@ const ContactPage = ({ onBack }) => {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Aruvi Medical Systems Location"
+                title="Aruvi Medical System Location"
               ></iframe>
             </div>
           </div>
