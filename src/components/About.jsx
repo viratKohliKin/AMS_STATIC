@@ -8,7 +8,7 @@ const About = ({ company }) => {
   
   const stats = [
     { icon: <FaAward />, number: company.stats.yearsExperience, label: 'Years Experience' },
-    { icon: <FaGlobe />, number: company.stats.countriesServed, label: 'Countries Served' },
+    { icon: <FaGlobe />, number: company.stats.countriesServed, label: 'States Served' },
     { icon: <FaUsers />, number: company.stats.healthcarePartners, label: 'Healthcare Partners' },
     { icon: <FaShieldAlt />, number: '100%', label: 'Quality Certified' }
   ];

@@ -41,7 +41,7 @@ const LocationMap = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Aruvi Medical Systems Location"
+              title="Aruvi Medical System Location"
               className="location-map-full"
             ></iframe>
           </div>

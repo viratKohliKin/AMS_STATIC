@@ -2,13 +2,13 @@
 import logoImage from '../assets/logo.png';
 export const companyConfig = {
    // Basic Company Info
-  name: "Aruvi Medical Systems",
-  legalName: "Aruvi Medical Systems Pvt. Ltd.",
+  name: "Aruvi Medical System",
+  legalName: "Aruvi Medical System Pvt. Ltd.",
   tagline: "Your Trusted Partner in Healthcare Solutions",
   logo: {
     type: "image", // Change from "text" to "image"
     image: logoImage, // Path to your logo
-    text: "Aruvi Medical Systems" // Fallback text
+    text: "Aruvi Medical System" // Fallback text
   },
   
   // Contact Information
@@ -41,8 +41,8 @@ export const companyConfig = {
 
   // Company Stats (easily updatable)
   stats: {
-    yearsExperience: "15+",
-    countriesServed: "50+",
+    yearsExperience: "10+",
+    countriesServed: "20+",
     healthcarePartners: "500+",
     productsAvailable: "1000+"
   },
@@ -87,7 +87,7 @@ export const companyConfig = {
   {
     icon: "🚚",
     title: "Fast Delivery",
-    description: "Quick and reliable shipping across the country"
+    description: "Quick and reliable shipping across India"
   },
   {
     icon: "🔧", 
