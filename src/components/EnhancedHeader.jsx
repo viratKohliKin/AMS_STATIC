@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaShoppingCart, FaBars, FaTimes, FaSearch } from 'react-icons/fa';
+import { FaShoppingCart, FaBars, FaTimes, FaSearch, FaUserCircle } from 'react-icons/fa';
 import './EnhancedHeader.css';
 import ServicesDropdown from './ServicesDropdown';
 import SearchSuggestions from './SearchSuggestions';
@@ -82,6 +82,11 @@ const EnhancedHeader = ({ company, searchQuery, setSearchQuery, onNavigate }) =>
               </div>
               
               <FaShoppingCart className="cart-icon" />
+              <FaUserCircle 
+  className="user-icon"
+  style={{ cursor: 'pointer' }}
+  onClick={() => onNavigate((prev) => prev === 'profile' ? 'home' : 'profile')}
+/>  
               
               {/* Mobile Search Toggle */}
               <button className="mobile-search-toggle" onClick={toggleMobileSearch}>
