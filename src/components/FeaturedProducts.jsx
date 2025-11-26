@@ -86,7 +86,7 @@ const FeaturedProducts = ({ onAddToQuote }) => {
                     className="btn btn-primary"
                     onClick={() => handleAddToQuote(product)}
                   >
-                    Add to Quote
+                    View & Buy
                   </button>
                 </div>
               </div>

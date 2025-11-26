@@ -229,3 +229,36 @@
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+/* --- MAKE QUICK LINKS & POLICY SIDE-BY-SIDE ON MOBILE --- */
+@media (max-width: 768px) {
+  .quick-links,
+  .policy-links {
+    text-align: left;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 25px;
+  }
+
+  /* Ensure company & contact become full width */
+  .footer-section:nth-child(1),
+  .footer-section:nth-child(4) {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+}
+
+/* --- PAYMENT METHODS SECTION --- */
+.payment-methods {
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.payment-img {
+  width: 260px;
+  max-width: 80%;
+  height: auto;
+  filter: brightness(0.95);
+}
