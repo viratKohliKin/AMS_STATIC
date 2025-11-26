@@ -76,7 +76,7 @@ const EnhancedHero = ({ company, searchQuery, setSearchQuery }) => {
                 </div>
                 <div className="stat">
                   <span className="number">{company.stats.countriesServed}</span>
-                  <span className="label">Countries Served</span>
+                  <span className="label">District Served</span>
                 </div>
                 <div className="stat">
                   <span className="number">{company.stats.healthcarePartners}</span>

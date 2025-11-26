@@ -1,0 +1,96 @@
+/* Inherits EVERYTHING from your LeadCaptureModal.css */
+
+/* GOOGLE LOGIN BUTTON */
+.google-btn {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid var(--border-light);
+  border-radius: 10px;
+  background: white;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: 0.3s ease;
+}
+
+.google-btn:hover {
+  background: #f3f4f6;
+}
+
+/* SEPARATOR */
+.separator {
+  text-align: center;
+  margin: 15px 0 25px;
+  position: relative;
+}
+
+.separator span {
+  background: #ffffff;
+  padding: 0 12px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.separator:before,
+.separator:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: var(--border-light);
+}
+
+.separator:before {
+  left: 0;
+}
+
+.separator:after {
+  right: 0;
+}
+
+/* SWITCH LOGIN/SIGNUP */
+.auth-switch {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.auth-switch span {
+  color: var(--primary-green);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* FIX: Prevent icons overlapping fields */
+
+.lead-form {
+  position: relative;
+  width: 100%;
+  margin-top: 10px !important;
+}
+
+.lead-form input,
+.lead-form textarea {
+  padding-left: 50px !important;   /* Ensures text doesn’t overlap icon */
+  position: relative;
+  z-index: 3;
+}
+
+/* FIX: Make icons always sit correctly above background */
+.input-icon {
+  z-index: 5 !important;
+  pointer-events: none;
+}
+
+/* FIX: Add spacing between header and content */
+.lead-modal-content {
+  padding-top: 35px !important;
+}
