@@ -145,7 +145,7 @@ const ProductCard = ({ product, onAddToQuote, onAddToComparison }) => {
           className="btn btn-primary"
           onClick={() => onAddToQuote(product)}
         >
-          Add to Quote
+          View & Buy
         </button>
         <button 
           className="btn btn-secondary comparison-btn"
